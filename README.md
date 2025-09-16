@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# SmartCafe Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+โปรเจค Frontend สำหรับระบบคาเฟ่อัจฉริยะ พัฒนาด้วย React + TypeScript + Vite
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🛍️ **สำหรับลูกค้า**: สั่งอาหาร/เครื่องดื่ม, ติดตามสถานะออเดอร์, ประวัติการสั่งซื้อ
+- 👨‍💼 **สำหรับ Admin**: จัดการเมนู, ติดตามออเดอร์, Dashboard สรุปยอดขาย
+- 📱 **Responsive Design**: ใช้งานได้ทั้งมือถือและเดสก์ท็อป
+- 🔒 **Authentication**: ระบบล็อกอินสำหรับ Admin และ Barista
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 18** - UI Library
+- **TypeScript** - Type Safety
+- **Vite** - Build Tool & Dev Server
+- **Zustand** - State Management
+- **React Router** - Routing
+- **Axios** - HTTP Client
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+1. **Clone repository**
+   ```bash
+   git clone [repository-url]
+   cd Test-Smartcafe-Fontend
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2. **ติดตั้ง dependencies**
+   ```bash
+   pnpm install
+   # หรือ
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. **รัน development server**
+   ```bash
+   pnpm dev
+   # หรือ
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 Available Scripts
+
+- `pnpm dev` - รัน development server
+
+## 🔑 Key Routes
+
+- `/` - หน้าเมนูสำหรับลูกค้า
+- `/admin` - หน้า Admin Dashboard
+- `/admin/login` - หน้าล็อกอิน Admin
+- `/barista` - หน้า Barista Dashboard
+
+
